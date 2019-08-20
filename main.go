@@ -1,16 +1,23 @@
 package main
 
-import "math"
+import (
+	"image"
+	"image/color"
+	"math"
+)
 
 const (
 	// W width
 	W int = 512
 	// H height
-	H int = 512
+	H          int = 512
+	whiteIndex     = 0 // first color in palette
+	blackIndex     = 1 // next color in palette
 )
 
-func setPixel(x, y int) {
+var palette = []color.Color{color.White, color.Black}
 
+func setPixel(x, y int, img image.Image) {
 }
 
 func ternary(expr bool, tval, fval int) int {
